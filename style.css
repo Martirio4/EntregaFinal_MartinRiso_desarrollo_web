@@ -1,11 +1,7 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,100;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap');
-
-@font-face {
-    font-family: "titulos";
-    src: url(fonts/Staatliches-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 body {
     max-width: 100%;
@@ -60,13 +56,13 @@ main {
 
 section.webuild h2 {
     color: rgb(9, 46, 16);
-    font-family: "titulos";
+    font-family: "Staatliches";
     font-size: 60px;
 }
 
 section.webuild h5 {
     color: rgb(9, 46, 16);
-    font-family: "titulos";
+    font-family: "Staatliches";
     font-size: xx-large;
 }
 
@@ -143,7 +139,7 @@ section.webuild h5 {
 
 .wewill-list-container h2 {
     color: rgb(9, 46, 16);
-    font-family: "titulos";
+    font-family: "Staatliches";
     font-size: 60px;
 }
 
@@ -184,7 +180,7 @@ section.webuild h5 {
 
 section.ourtools h2 {
     color: rgb(9, 46, 16);
-    font-family: "titulos";
+    font-family: "Staatliches";
     font-size: 60px;
     margin-bottom: 2%;
 }
@@ -221,7 +217,7 @@ section.ourtools h2 {
 
 .contactus h2 {
     color: rgb(9, 46, 16);
-    font-family: "titulos";
+    font-family: "Staatliches";
     font-size: 60px;
 }
 
@@ -288,24 +284,24 @@ section.ourtools h2 {
     section.webuild h2 {
         width: 100%;
         color: rgb(9, 46, 16);
-        font-family: titulos;
+        font-family: Staatliches;
         font-size: 90px;
     }
 
     .wewill-list-container h2 {
         color: rgb(9, 46, 16);
-        font-family: titulos;
+        font-family: Staatliches;
         font-size: 90px;
     }
 
     section.ourtools h2 {
         color: rgb(9, 46, 16);
-        font-family: titulos;
+        font-family: Staatliches;
         font-size: 90px;
     }
     .contactus h2 {
         color: rgb(9, 46, 16);
-        font-family: titulos;
+        font-family: Staatliches;
         font-size: 90px;
     }
 
@@ -349,5 +345,12 @@ section.ourtools h2 {
         font-size: clamp(8vw,8vw,10vw);
         color: rgb(247, 233, 144);
         top: 20%;
+    }
+    .banner-image-container{
+    margin-top: 60px;
+    position: relative;
+    width: 100vw;
+    height: 25vh;
+    overflow: hidden;
     }
 }
