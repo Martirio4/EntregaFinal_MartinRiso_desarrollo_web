@@ -1,0 +1,380 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap');
+
+@font-face {
+    font-family: "titulos";
+    src: url(../nomadWebSite/fonts/Staatliches-Regular.ttf);
+}
+
+body {
+    max-width: 100%;
+}
+
+.navbar {
+   font-size: x-large;
+   background-color: rgb(192, 252, 216); 
+}
+
+.navbar-toggler-icon {}
+
+
+main {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-banner {
+    width: 100%;
+    background-color: rgba(0, 255, 102, 0.08);
+}
+
+.main-container {
+        top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-image-container {
+    margin-top: 60px;
+    position: relative;
+    width: 100vw;
+    height: 40vh;
+    overflow: hidden;
+    background-color: rgba(0, 255, 102, 0.08);
+}
+
+.banner-img {
+    width: 120%;
+}
+
+.main-text-container h1 {
+    position: absolute;
+    top: 20vh;
+}
+
+.main-text-container h2 {
+    position: absolute;
+    top: 35vh;
+}
+
+section.webuild h2 {
+    color: rgb(9, 46, 16);
+    font-family: titulos;
+    font-size: 60px;
+}
+
+section.webuild h5 {
+    color: rgb(9, 46, 16);
+    font-family: titulos;
+    font-size: xx-large;
+}
+
+
+
+
+.webuild {
+    padding: 50px;
+    width: 95%;
+    background-color: rgba(0, 255, 102, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.webuild-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-tool {
+    width: 64px;
+    height: auto;
+}
+
+.card-toolbox {
+    width: 64px;
+    height: auto;
+}
+
+.card-body {
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.card-body a {
+    font-weight: 600;
+}
+
+.btn {
+    width: 100%;
+    color: rgb(9, 46, 16) !important;
+    border-color: rgb(229, 1, 111) !important;
+    background-color: transparent !important;
+}
+
+.btn:hover {
+    color: rgb(229, 1, 111) !important;
+    border-color: rgb(9, 46, 16) !important;
+    background-color: rgba(9, 46, 16, 0.05) !important;
+}
+
+.wewill-container {
+    max-width: 95%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.wewill-image-container {
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wewill-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wewill-list-container h2 {
+    color: rgb(9, 46, 16);
+    font-family: titulos;
+    font-size: 60px;
+
+}
+
+.tick_article {
+    display: flex;
+    flex-direction: row;
+}
+
+.tick_article img {
+    margin: 10px;
+    width: 64px;
+    height: 64px;
+}
+
+.tick_container {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.wewill h5 {
+    font-family: 'nunito';
+    font-weight: 600;
+}
+
+.p_texto {
+    font-family: 'nunito';
+    font-weight: 300;
+    font-size: large;
+
+}
+
+.ourtools {
+    background-color: rgba(0, 255, 102, 0.08);
+    padding-top: 3%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+}
+
+section.ourtools h2 {
+    color: rgb(9, 46, 16);
+    font-family: titulos;
+    font-size: 60px;
+    margin-bottom: 2%;
+}
+
+.ourtools-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+
+}
+
+.ourtools-img-container {
+    padding: 20px;
+}
+
+.ourtools img {
+    width: 66%;
+}
+
+.card-body h5 {
+    font-family: "nunito";
+    font-size: xxx-large;
+}
+
+.card-body p {
+    font-family: "nunito";
+    font-size: x-large;
+}
+
+
+.contactus {
+    width: 80%;
+   margin-bottom: 50px;
+}
+.contactus h2 {
+    color: rgb(9, 46, 16);
+    font-family: titulos;
+    font-size: 60px;
+}
+
+.contact-form {
+    background: #fff;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.contact-form .form-control {
+    border-radius: 1rem;
+}
+
+.contact-image {
+    text-align: center;
+}
+
+.contact-image img {
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+
+.contact-form form {
+    padding: 5%;
+}
+
+.contact-form form .row {
+    margin-bottom: -7%;
+}
+
+
+
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+.footer-container{
+    background-color: rgb(192, 252, 216);
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+
+
+
+/* Extra small devices (phones, 991px and down) */
+@media only screen and (max-width: 991px) {
+    .wewill-image-container {
+        display: none;
+    }
+
+    .main-container h1 {
+        display: none;
+    }
+
+    .main-container h2 {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    section.webuild h2 {
+        width: 100%;
+        color: rgb(9, 46, 16);
+        font-family: titulos;
+        font-size: 90px;
+    }
+
+    .wewill-list-container h2 {
+        color: rgb(9, 46, 16);
+        font-family: titulos;
+        font-size: 90px;
+    }
+
+    section.ourtools h2 {
+        color: rgb(9, 46, 16);
+        font-family: titulos;
+        font-size: 90px;
+    }
+    .contactus h2 {
+        color: rgb(9, 46, 16);
+        font-family: titulos;
+        font-size: 90px;
+    }
+
+    .wewill-list-container {
+        width: 60%;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .main-text-container {
+        padding-left: 10vh;
+    }
+
+    .main-text-container h1 {
+        display: absolute;
+        font-family: "nunito";
+        font-size: 12vh;
+        color: white;
+        top: 20%;
+    }
+
+    .main-text-container h2 {
+        display: absolute;
+        font-family: "nunito";
+        font-size: 8vh;
+        color: rgb(247, 233, 144);
+        top: 35%;
+    }
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
