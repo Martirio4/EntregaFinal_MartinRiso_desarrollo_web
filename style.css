@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "titulos";
-    src: url(../nomadWebSite/fonts/Staatliches-Regular.ttf);
+    src: url(fonts/Staatliches-Regular.ttf);
 }
 
 body {
@@ -12,12 +12,9 @@ body {
 }
 
 .navbar {
-   font-size: x-large;
-   background-color: rgb(192, 252, 216); 
+    font-size: x-large;
+    background-color: rgb(192, 252, 216);
 }
-
-.navbar-toggler-icon {}
-
 
 main {
     align-items: center;
@@ -32,7 +29,7 @@ main {
 }
 
 .main-container {
-        top: 60px;
+    top: 60px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -63,18 +60,15 @@ main {
 
 section.webuild h2 {
     color: rgb(9, 46, 16);
-    font-family: titulos;
+    font-family: "titulos";
     font-size: 60px;
 }
 
 section.webuild h5 {
     color: rgb(9, 46, 16);
-    font-family: titulos;
+    font-family: "titulos";
     font-size: xx-large;
 }
-
-
-
 
 .webuild {
     padding: 50px;
@@ -97,18 +91,13 @@ section.webuild h5 {
     align-items: center;
 }
 
-.card-tool {
-    width: 64px;
-    height: auto;
-}
-
+.card-tool,
 .card-toolbox {
     width: 64px;
     height: auto;
 }
 
 .card-body {
-
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -154,9 +143,8 @@ section.webuild h5 {
 
 .wewill-list-container h2 {
     color: rgb(9, 46, 16);
-    font-family: titulos;
+    font-family: "titulos";
     font-size: 60px;
-
 }
 
 .tick_article {
@@ -184,7 +172,6 @@ section.webuild h5 {
     font-family: 'nunito';
     font-weight: 300;
     font-size: large;
-
 }
 
 .ourtools {
@@ -197,7 +184,7 @@ section.webuild h5 {
 
 section.ourtools h2 {
     color: rgb(9, 46, 16);
-    font-family: titulos;
+    font-family: "titulos";
     font-size: 60px;
     margin-bottom: 2%;
 }
@@ -205,9 +192,8 @@ section.ourtools h2 {
 .ourtools-container {
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-
 }
 
 .ourtools-img-container {
@@ -228,14 +214,14 @@ section.ourtools h2 {
     font-size: x-large;
 }
 
-
 .contactus {
     width: 80%;
-   margin-bottom: 50px;
+    margin-bottom: 50px;
 }
+
 .contactus h2 {
     color: rgb(9, 46, 16);
-    font-family: titulos;
+    font-family: "titulos";
     font-size: 60px;
 }
 
@@ -268,8 +254,6 @@ section.ourtools h2 {
     margin-bottom: -7%;
 }
 
-
-
 .contact-form .btnContact {
     width: 50%;
     border: none;
@@ -290,7 +274,8 @@ section.ourtools h2 {
     border: none;
     cursor: pointer;
 }
-.footer-container{
+
+.footer-container {
     background-color: rgb(192, 252, 216);
     height: 10%;
     display: flex;
@@ -299,24 +284,6 @@ section.ourtools h2 {
     padding-top: 5px;
 }
 
-
-
-/* Extra small devices (phones, 991px and down) */
-@media only screen and (max-width: 991px) {
-    .wewill-image-container {
-        display: none;
-    }
-
-    .main-container h1 {
-        display: none;
-    }
-
-    .main-container h2 {
-        display: none;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     section.webuild h2 {
         width: 100%;
@@ -345,13 +312,7 @@ section.ourtools h2 {
     .wewill-list-container {
         width: 60%;
     }
-
 }
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .main-text-container {
         padding-left: 10vh;
@@ -372,9 +333,21 @@ section.ourtools h2 {
         color: rgb(247, 233, 144);
         top: 35%;
     }
-
-
 }
+@media only screen and (max-width: 991px) {
+    .main-text-container h1 {
+        display: absolute;
+        font-family: "nunito";
+        font-size: clamp(12vw,12vw,14vw);
+        color: white;
+        top: 10%;
+    }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+    .main-text-container h2 {
+        display: absolute;
+        font-family: "nunito";
+        font-size: clamp(8vw,8vw,10vw);
+        color: rgb(247, 233, 144);
+        top: 20%;
+    }
+}
