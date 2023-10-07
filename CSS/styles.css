@@ -305,12 +305,14 @@ section.contactus .redes-container img {
 }
 
 .footer-container {
-  background-image: #264653;
+  padding: 0 5% 0 5%;
+  background-color: #264653;
+  color: #e9c46a;
   height: 10%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   padding-top: 5px;
+  justify-content: space-between;
 }
 
 @media only screen and (min-width: 600px) {
