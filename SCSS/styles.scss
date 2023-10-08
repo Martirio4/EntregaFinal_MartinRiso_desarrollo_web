@@ -10,7 +10,7 @@ $light: #2a9d8fff;
 $accent-light: #e9c46aff;
 $accent-dark: #f4a261ff;
 $blanco:#f1e5d2;
-$fade-accent-light: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(233, 196, 106, 1));
+$fade-accent-light: linear-gradient(to bottom, $dark, $accent-dark);
 
 
 /*Estilos*/
@@ -20,6 +20,17 @@ body {
     .navbar {
         font-size: x-large;
         background-color: $dark;
+        display: flex;
+        flex-direction: column;
+        
+        
+
+
+        .nav-divider{
+            width: 100%;
+            height: 2px;
+            background-color: $blanco
+        }
 
         a {
             color: $accent-light;
@@ -56,30 +67,12 @@ main {
             .banner-image-container {
                 margin-top: 60px;
                 position: relative;
-                width: 100vw;
-                height: 40vh;
-                overflow: hidden;
-
-                .banner-img {
-                    width: 120%;
-                }
-            }
-
-            .main-text-container {
-                h1 {
-                    position: absolute;
-                    top: 20vh;
-                }
-
-                h2 {
-                    position: absolute;
-                    top: 35vh;
-                }
+                
+                background-image: $fade-accent-light;             
             }
         }
     }
 }
-
 .separador-webuild {
     background-color: $blanco;
     height: 50px;
@@ -87,16 +80,20 @@ main {
 }
 
 section.webuild {
-    padding: 3%;
     width: 100%;
+    padding: 3%;
     background-color: $accent-light;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
 
     h2 {
+        width: 100%;
+        text-align: start;
         font-family: "Staatliches";
-        font-size: 60px;
+        color: $dark;
+        font-size: 90px;
     }
 
     h5 {
@@ -109,6 +106,8 @@ section.webuild {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
 
         .card {
             background-color: $blanco;
@@ -173,6 +172,12 @@ section.wewill {
             flex-direction: column;
             align-items: center;
 
+            h2{
+                font-family: "Staatliches";
+                font-size: 90px;
+                color: $dark;
+            }
+
             .tick_article {
                 display: flex;
                 flex-direction: row;
@@ -207,73 +212,94 @@ section.ourtools {
     background-color: $light;
     width: 100%;
     padding: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between ;
 
     h2 {
         color: $accent-dark;
         font-family: "Staatliches";
-        font-size: 60px;
+        font-size: 90px;
         margin-bottom: 2%;
+        margin-right: 2%;
     }
 
-    .ourtools-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    
 
-        .ourtools-img-container {
-            padding: 20px;
-        }
-
-        img {
-            width: 66%;
+        img{
+            margin-left: 40px;
         }
 
         .card {
             margin-top: 20px;
 
+
             .card-body {
+                background-color: $blanco;
                 h5 {
-                    font-family: "nunito";
+                    font-size: x-large;
+                    color: $dark;
+                    font-family: "Staatliches";
                 }
 
                 p {
                     font-family: "nunito";
                 }
             }
-        }
+            .btn {
+                width: 100%;
+                color: $dark;
+                border-color: $dark;
+                background-color: $accent-dark !important;
+            }
 
-    }
+            &:hover {
+                .btn {
+                    color: $accent-light;
+                    border-color: $accent-dark;
+                    background-color: $dark !important;
+                }
+            }
+        }
 }
 
 section.contactus {
     width: 100%;
-    padding: 5%;
+    
     background-color: $accent-light;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    align-content: space;
+ 
 
     h2 {
         color: $dark;
         font-family: "Staatliches";
-        font-size: 60px;
+        font-size: 90px;
+        margin-bottom: 2%;
     }
 
     .form-mapa-container{
         width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-items: center;
-        justify-content: space-evenly;
+        flex-direction: column;
         flex-wrap: wrap;
-        padding: 2% 0 2% 0;
+        align-items: center;
+        padding: 2%;
+
+        iframe{
+            margin-top: 3%;
+            width: 90%;
+            height: 40vh;
+        }
+       
+        
         
         .form-container {
-            margin-top: 2%;
-            margin-bottom: 4%;
-            width: 40%;
+            
             background-color: $blanco;
             border: 2px solid transparent;
             padding: 32px 24px;
@@ -360,6 +386,12 @@ section.contactus {
             }
         }
     }
+    .redes-divider{
+        background-color:$dark;
+        width: 90%;
+        height: 3px;
+        margin-bottom: 2%;
+    }
     .redes-container{
         width: 70%;
         display: flex;
@@ -369,9 +401,7 @@ section.contactus {
             width: 64px;
         }
     }
-    
 }
-
 
 .footer-container {
     padding: 0 5% 0 5%;
@@ -382,83 +412,64 @@ section.contactus {
     flex-direction: row;
     padding-top: 5px;
     justify-content: space-between;
-}
-
-@media only screen and (min-width: 600px) {
-    section.webuild h2 {
-        width: 100%;
-        color: $dark;
-        font-family: Staatliches;
-        font-size: 90px;
-    }
-
-    .wewill-list-container h2 {
-        color: $dark;
-        font-family: Staatliches;
-        font-size: 90px;
-    }
-
-    section.ourtools h2 {
+    a{
         color: $accent-light;
-        font-family: Staatliches;
-        font-size: 90px;
-    }
-
-    .contactus h2 {
-        color: $dark;
-        font-family: Staatliches;
-        font-size: 90px;
-    }
-
-    .wewill-list-container {
-        width: 60%;
     }
 }
+
 
 @media only screen and (min-width: 992px) {
-    .main-text-container {
-        padding-left: 10vh;
-
-        h1 {
-            display: absolute;
-            font-family: "nunito";
-            font-size: 12vh;
-            color: white;
-            top: 20%;
+    main {
+        .nav-divider{
+            display: flex;
+            width: 100%;
+            height: 2px;
+            background-color: $blanco
         }
-
-        h2 {
-            display: absolute;
-            font-family: "nunito";
-            font-size: 8vh;
-            color: rgb(247, 233, 144);
-            top: 35%;
-        }
-    }
+    } 
 }
 
 @media only screen and (max-width: 991px) {
-    .main-text-container h1 {
-        display: absolute;
-        font-family: "nunito";
-        font-size: clamp(12vw, 12vw, 14vw);
-        color: white;
-        top: 10%;
+   
+    .nav-divider{
+        display: none;
+        width: 100%;
+        height: 2px;
+        background-color: $blanco
+    }
+    section.webuild h2{
+        text-align: center;
     }
 
-    .main-text-container h2 {
-        display: absolute;
-        font-family: "nunito";
-        font-size: clamp(8vw, 8vw, 10vw);
-        color: rgb(247, 233, 144);
-        top: 20%;
+    section.ourtools {
+        background-color: $light;
+        width: 100%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between ;
+
+        img{
+            margin-left: 0px;
+            margin-top: 20px;
+        }
     }
 
-    .banner-image-container {
-        margin-top: 60px;
-        position: relative;
-        width: 100vw;
-        height: 25vh;
-        overflow: hidden;
+    .wewill-image-container{
+        display: none;
+    }
+    .form-mapa-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        iframe{
+            margin-top: 3%;
+            width: 90%;
+            height: 40vh;
+        }
     }
 }

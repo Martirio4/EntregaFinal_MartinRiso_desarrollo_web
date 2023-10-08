@@ -11,6 +11,13 @@ body {
 body .navbar {
   font-size: x-large;
   background-color: #264653;
+  display: flex;
+  flex-direction: column;
+}
+body .navbar .nav-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #f1e5d2;
 }
 body .navbar a {
   color: #e9c46a;
@@ -40,20 +47,7 @@ main .main-banner .main-container {
 main .main-banner .main-container .banner-image-container {
   margin-top: 60px;
   position: relative;
-  width: 100vw;
-  height: 40vh;
-  overflow: hidden;
-}
-main .main-banner .main-container .banner-image-container .banner-img {
-  width: 120%;
-}
-main .main-banner .main-container .main-text-container h1 {
-  position: absolute;
-  top: 20vh;
-}
-main .main-banner .main-container .main-text-container h2 {
-  position: absolute;
-  top: 35vh;
+  background-image: linear-gradient(to bottom, #264653, #f4a261);
 }
 
 .separador-webuild {
@@ -63,16 +57,20 @@ main .main-banner .main-container .main-text-container h2 {
 }
 
 section.webuild {
-  padding: 3%;
   width: 100%;
+  padding: 3%;
   background-color: #e9c46a;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
 }
 section.webuild h2 {
+  width: 100%;
+  text-align: start;
   font-family: "Staatliches";
-  font-size: 60px;
+  color: #264653;
+  font-size: 90px;
 }
 section.webuild h5 {
   color: #2a9d8f;
@@ -83,6 +81,8 @@ section.webuild .webuild-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 section.webuild .webuild-container .card {
   background-color: #f1e5d2;
@@ -136,6 +136,11 @@ section.wewill .wewill-container .wewill-list-container {
   flex-direction: column;
   align-items: center;
 }
+section.wewill .wewill-container .wewill-list-container h2 {
+  font-family: "Staatliches";
+  font-size: 90px;
+  color: #264653;
+}
 section.wewill .wewill-container .wewill-list-container .tick_article {
   display: flex;
   flex-direction: row;
@@ -163,62 +168,76 @@ section.ourtools {
   background-color: #2a9d8f;
   width: 100%;
   padding: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 section.ourtools h2 {
   color: #f4a261;
   font-family: "Staatliches";
-  font-size: 60px;
+  font-size: 90px;
   margin-bottom: 2%;
+  margin-right: 2%;
 }
-section.ourtools .ourtools-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+section.ourtools img {
+  margin-left: 40px;
 }
-section.ourtools .ourtools-container .ourtools-img-container {
-  padding: 20px;
-}
-section.ourtools .ourtools-container img {
-  width: 66%;
-}
-section.ourtools .ourtools-container .card {
+section.ourtools .card {
   margin-top: 20px;
 }
-section.ourtools .ourtools-container .card .card-body h5 {
+section.ourtools .card .card-body {
+  background-color: #f1e5d2;
+}
+section.ourtools .card .card-body h5 {
+  font-size: x-large;
+  color: #264653;
+  font-family: "Staatliches";
+}
+section.ourtools .card .card-body p {
   font-family: "nunito";
 }
-section.ourtools .ourtools-container .card .card-body p {
-  font-family: "nunito";
+section.ourtools .card .btn {
+  width: 100%;
+  color: #264653;
+  border-color: #264653;
+  background-color: #f4a261 !important;
+}
+section.ourtools .card:hover .btn {
+  color: #e9c46a;
+  border-color: #f4a261;
+  background-color: #264653 !important;
 }
 
 section.contactus {
   width: 100%;
-  padding: 5%;
   background-color: #e9c46a;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  align-content: space;
 }
 section.contactus h2 {
   color: #264653;
   font-family: "Staatliches";
-  font-size: 60px;
+  font-size: 90px;
+  margin-bottom: 2%;
 }
 section.contactus .form-mapa-container {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 2% 0 2% 0;
+  align-items: center;
+  padding: 2%;
+}
+section.contactus .form-mapa-container iframe {
+  margin-top: 3%;
+  width: 90%;
+  height: 40vh;
 }
 section.contactus .form-mapa-container .form-container {
-  margin-top: 2%;
-  margin-bottom: 4%;
-  width: 40%;
   background-color: #f1e5d2;
   border: 2px solid transparent;
   padding: 32px 24px;
@@ -294,6 +313,12 @@ section.contactus .form-mapa-container .form-container .form .form-submit-btn:ho
   background-color: #fff;
   border-color: #fff;
 }
+section.contactus .redes-divider {
+  background-color: #264653;
+  width: 90%;
+  height: 3px;
+  margin-bottom: 2%;
+}
 section.contactus .redes-container {
   width: 70%;
   display: flex;
@@ -314,73 +339,56 @@ section.contactus .redes-container img {
   padding-top: 5px;
   justify-content: space-between;
 }
-
-@media only screen and (min-width: 600px) {
-  section.webuild h2 {
-    width: 100%;
-    color: #264653;
-    font-family: Staatliches;
-    font-size: 90px;
-  }
-  .wewill-list-container h2 {
-    color: #264653;
-    font-family: Staatliches;
-    font-size: 90px;
-  }
-  section.ourtools h2 {
-    color: #e9c46a;
-    font-family: Staatliches;
-    font-size: 90px;
-  }
-  .contactus h2 {
-    color: #264653;
-    font-family: Staatliches;
-    font-size: 90px;
-  }
-  .wewill-list-container {
-    width: 60%;
-  }
+.footer-container a {
+  color: #e9c46a;
 }
+
 @media only screen and (min-width: 992px) {
-  .main-text-container {
-    padding-left: 10vh;
-  }
-  .main-text-container h1 {
-    display: absolute;
-    font-family: "nunito";
-    font-size: 12vh;
-    color: white;
-    top: 20%;
-  }
-  .main-text-container h2 {
-    display: absolute;
-    font-family: "nunito";
-    font-size: 8vh;
-    color: rgb(247, 233, 144);
-    top: 35%;
+  main .nav-divider {
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: #f1e5d2;
   }
 }
 @media only screen and (max-width: 991px) {
-  .main-text-container h1 {
-    display: absolute;
-    font-family: "nunito";
-    font-size: 12vw;
-    color: white;
-    top: 10%;
+  .nav-divider {
+    display: none;
+    width: 100%;
+    height: 2px;
+    background-color: #f1e5d2;
   }
-  .main-text-container h2 {
-    display: absolute;
-    font-family: "nunito";
-    font-size: 8vw;
-    color: rgb(247, 233, 144);
-    top: 20%;
+  section.webuild h2 {
+    text-align: center;
   }
-  .banner-image-container {
-    margin-top: 60px;
-    position: relative;
-    width: 100vw;
-    height: 25vh;
-    overflow: hidden;
+  section.ourtools {
+    background-color: #2a9d8f;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section.ourtools img {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .wewill-image-container {
+    display: none;
+  }
+  .form-mapa-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .form-mapa-container iframe {
+    margin-top: 3%;
+    width: 90%;
+    height: 40vh;
   }
 }
 
