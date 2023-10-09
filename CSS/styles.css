@@ -2,9 +2,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,100;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-/*Variables*/
-/* SCSS HEX */
-/*Estilos*/
+/* Variables */
+/* mixin - setea flex y visualizacion de componenetes. */
+/* extend placeholders */
+/*extend para h2*/
+section.contactus, section.ourtools, section.wewill, section.webuild {
+  width: 100%;
+}
+section.contactus h2, section.ourtools h2, section.wewill h2, section.webuild h2 {
+  font-family: "staatliches";
+  font-size: 90px;
+}
+section.contactus h2:hover, section.ourtools h2:hover, section.wewill h2:hover, section.webuild h2:hover {
+  -webkit-animation: bounce-top 0.9s both;
+  animation: bounce-top 0.9s both;
+}
+
+/*extend para botones con hover*/
+section.ourtools .card .btn, section.webuild .webuild-container .card .btn {
+  width: 100%;
+  color: #264653;
+  border-color: #f4a261;
+  background-color: transparent !important;
+}
+section.ourtools .card:hover .btn, section.webuild .webuild-container .card:hover .btn {
+  color: #f4a261;
+  border-color: #264653;
+  background-color: rgba(9, 46, 16, 0.05) !important;
+}
+
+/* Estilos */
 body {
   max-width: 100%;
 }
@@ -46,8 +73,12 @@ main .main-banner .main-container {
 }
 main .main-banner .main-container .banner-image-container {
   margin-top: 60px;
-  position: relative;
   background-image: linear-gradient(to bottom, #264653, #f4a261);
+  overflow: hidden;
+}
+main .main-banner .main-container .banner-image-container img {
+  -webkit-animation: kenburns-top 5s ease-out infinite alternate both;
+  animation: kenburns-top 5s ease-out infinite alternate both;
 }
 
 .separador-webuild {
@@ -57,20 +88,18 @@ main .main-banner .main-container .banner-image-container {
 }
 
 section.webuild {
-  width: 100%;
-  padding: 3%;
-  background-color: #e9c46a;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  padding: 3%;
+  background-color: #e9c46a;
 }
 section.webuild h2 {
   width: 100%;
   text-align: start;
-  font-family: "Staatliches";
   color: #264653;
-  font-size: 90px;
 }
 section.webuild h5 {
   color: #2a9d8f;
@@ -103,17 +132,6 @@ section.webuild .webuild-container .card .card-body {
 section.webuild .webuild-container .card .card-body a {
   font-weight: 600;
 }
-section.webuild .webuild-container .card .btn {
-  width: 100%;
-  color: #264653;
-  border-color: #f4a261;
-  background-color: transparent !important;
-}
-section.webuild .webuild-container .card:hover .btn {
-  color: #f4a261;
-  border-color: #264653;
-  background-color: rgba(9, 46, 16, 0.05) !important;
-}
 
 section.wewill {
   width: 100%;
@@ -131,14 +149,13 @@ section.wewill .wewill-container .wewill-image-container {
   overflow: hidden;
 }
 section.wewill .wewill-container .wewill-list-container {
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
 }
 section.wewill .wewill-container .wewill-list-container h2 {
-  font-family: "Staatliches";
-  font-size: 90px;
   color: #264653;
 }
 section.wewill .wewill-container .wewill-list-container .tick_article {
@@ -165,23 +182,22 @@ section.wewill .wewill-container .wewill-list-container .p_texto {
 }
 
 section.ourtools {
-  background-color: #2a9d8f;
-  width: 100%;
-  padding: 5%;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  background-color: #2a9d8f;
+  padding: 5%;
 }
 section.ourtools h2 {
   color: #f4a261;
-  font-family: "Staatliches";
-  font-size: 90px;
   margin-bottom: 2%;
   margin-right: 2%;
 }
 section.ourtools img {
-  margin-left: 40px;
+  margin-left: 0px;
+  margin-top: 20px;
 }
 section.ourtools .card {
   margin-top: 20px;
@@ -197,53 +213,39 @@ section.ourtools .card .card-body h5 {
 section.ourtools .card .card-body p {
   font-family: "nunito";
 }
-section.ourtools .card .btn {
-  width: 100%;
-  color: #264653;
-  border-color: #264653;
-  background-color: #f4a261 !important;
-}
-section.ourtools .card:hover .btn {
-  color: #e9c46a;
-  border-color: #f4a261;
-  background-color: #264653 !important;
-}
 
 section.contactus {
-  width: 100%;
-  background-color: #e9c46a;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
-  align-content: space;
+  justify-content: center;
+  background-color: #e9c46a;
+  padding-top: 3%;
 }
 section.contactus h2 {
   color: #264653;
-  font-family: "Staatliches";
-  font-size: 90px;
   margin-bottom: 2%;
 }
 section.contactus .form-mapa-container {
+  margin-bottom: 3%;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 2%;
+  flex-direction: row;
+  justify-content: space-around;
 }
 section.contactus .form-mapa-container iframe {
-  margin-top: 3%;
-  width: 90%;
   height: 40vh;
+  border-radius: 16px;
 }
 section.contactus .form-mapa-container .form-container {
+  height: 40vh;
   background-color: #f1e5d2;
   border: 2px solid transparent;
   padding: 32px 24px;
   font-size: 14px;
   font-family: inherit;
-  color: white;
+  color: #264653;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -270,38 +272,42 @@ section.contactus .form-mapa-container .form-container .form .form-group label {
   font-weight: 600;
   font-size: 12px;
 }
-section.contactus .form-mapa-container .form-container .form .form-group input, section.contactus .form-mapa-container .form-container .form .form-group textarea {
+section.contactus .form-mapa-container .form-container .form .form-group input,
+section.contactus .form-mapa-container .form-container .form .form-group textarea {
   width: 100%;
   padding: 12px 16px;
   border-radius: 8px;
   color: #264653;
   font-family: inherit;
-  font-size: x-large;
+  font-size: large;
   background-color: transparent;
   border: 1px solid #414141;
 }
-section.contactus .form-mapa-container .form-container .form .form-group input::placeholder, section.contactus .form-mapa-container .form-container .form .form-group textarea::placeholder {
+section.contactus .form-mapa-container .form-container .form .form-group input::placeholder,
+section.contactus .form-mapa-container .form-container .form .form-group textarea::placeholder {
   opacity: 0.5;
 }
-section.contactus .form-mapa-container .form-container .form .form-group input:focus, section.contactus .form-mapa-container .form-container .form .form-group textarea:focus {
+section.contactus .form-mapa-container .form-container .form .form-group input:focus,
+section.contactus .form-mapa-container .form-container .form .form-group textarea:focus {
   outline: none;
   border-color: #2a9d8f;
 }
 section.contactus .form-mapa-container .form-container .form .form-group textarea {
-  height: 96px;
+  height: 90px;
   resize: none;
 }
 section.contactus .form-mapa-container .form-container .form .form-submit-btn {
+  color: #264653;
+  background-color: transparent !important;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   align-self: flex-start;
   font-family: inherit;
-  color: #717171;
   font-weight: 600;
   width: 40%;
-  background: #313131;
-  border: 1px solid #414141;
+  background: #f4a261;
+  border: 1px solid #f4a261;
   padding: 12px 16px;
   font-size: inherit;
   gap: 8px;
@@ -310,8 +316,9 @@ section.contactus .form-mapa-container .form-container .form .form-submit-btn {
   border-radius: 6px;
 }
 section.contactus .form-mapa-container .form-container .form .form-submit-btn:hover {
-  background-color: #fff;
-  border-color: #fff;
+  color: #f4a261;
+  border-color: #264653;
+  background-color: rgba(9, 46, 16, 0.05) !important;
 }
 section.contactus .redes-divider {
   background-color: #264653;
@@ -320,6 +327,7 @@ section.contactus .redes-divider {
   margin-bottom: 2%;
 }
 section.contactus .redes-container {
+  margin-bottom: 2%;
   width: 70%;
   display: flex;
   flex-direction: row;
@@ -330,19 +338,159 @@ section.contactus .redes-container img {
 }
 
 .footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: none;
+  justify-content: space-between;
   padding: 0 5% 0 5%;
   background-color: #264653;
   color: #e9c46a;
   height: 10%;
-  display: flex;
-  flex-direction: row;
   padding-top: 5px;
-  justify-content: space-between;
 }
 .footer-container a {
   color: #e9c46a;
 }
 
+/*ANIMACIONES*/
+/**
+ * ----------------------------------------
+ * animation bounce-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation kenburns-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+@keyframes kenburns-top {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 16%;
+    transform-origin: 50% 16%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(-15px);
+    transform: scale(1.25) translateY(-15px);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+}
+/*MEDIAQUERIES - BREAKPOINTS*/
 @media only screen and (min-width: 992px) {
   main .nav-divider {
     display: flex;
@@ -380,10 +528,10 @@ section.contactus .redes-container img {
   .form-mapa-container {
     width: 100%;
     display: flex;
-    flex-direction: row;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
   }
   .form-mapa-container iframe {
     margin-top: 3%;
