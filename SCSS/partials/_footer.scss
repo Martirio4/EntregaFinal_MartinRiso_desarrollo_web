@@ -1,0 +1,12 @@
+.footer-container {
+    @include section-layout(row, nowrap, none, space-between);
+    padding: 0 5% 0 5%;
+    background-color: $dark;
+    color: $accent-light;
+    height: 10%;
+    padding-top: 5px;
+
+    a {
+        color: $accent-light;
+    }
+}

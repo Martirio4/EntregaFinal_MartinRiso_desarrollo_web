@@ -1,0 +1,49 @@
+section.webuild {
+    @extend %section-format;
+    @include section-layout(column, nowrap, center, center);
+    padding: 3%;
+    background-color: $accent-light;
+
+
+
+    h2 {
+        width: 100%;
+        text-align: start;
+        color: $dark;
+    }
+
+    h5 {
+        color: $light;
+        font-family: "Staatliches";
+        font-size: xx-large;
+    }
+
+    .webuild-container {
+        @include section-layout(row, wrap, center, center);
+
+        .card {
+            background-color: $blanco;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+
+            .card-tool,
+            .card-toolbox {
+                width: 64px;
+                height: auto;
+            }
+
+            .card-body {
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+
+                a {
+                    font-weight: 600;
+                }
+            }
+
+            @extend %btn-format;
+        }
+    }
+}

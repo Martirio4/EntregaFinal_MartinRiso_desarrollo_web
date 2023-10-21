@@ -1,0 +1,53 @@
+section.wewill {
+    @extend %section-format;
+    width: 100%;
+    background-color: $blanco;
+    padding: 5%;
+
+    .wewill-container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .wewill-image-container {
+            padding-left: 3%;
+            padding-right: 3%;
+            overflow: hidden;
+        }
+
+        .wewill-list-container {
+            @include section-layout(column, nowrap, center, center);
+
+            h2 {
+                color: $dark;
+            }
+
+            .tick_article {
+                display: flex;
+                flex-direction: row;
+
+                img {
+                    margin: 10px;
+                    width: 64px;
+                    height: 64px;
+                }
+
+                .tick_container {
+                    margin-top: 15px;
+                    padding-left: 10px;
+                }
+            }
+
+            h5 {
+                font-family: 'nunito';
+                font-weight: 600;
+            }
+
+            .p_texto {
+                font-family: 'nunito';
+                font-weight: 300;
+                font-size: large;
+            }
+        }
+    }
+}

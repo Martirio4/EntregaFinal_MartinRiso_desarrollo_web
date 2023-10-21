@@ -1,0 +1,37 @@
+section.ourtools {
+    @extend %section-format;
+    @include section-layout(row, nowrap, center, space-between);
+    background-color: $light;
+    padding: 5%;
+
+    h2 {
+        color: $accent-dark;
+        margin-bottom: 2%;
+        margin-right: 2%;
+    }
+
+    img {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .card {
+        margin-top: 20px;
+
+        .card-body {
+            background-color: $blanco;
+
+            h5 {
+                font-size: x-large;
+                color: $dark;
+                font-family: "Staatliches";
+            }
+
+            p {
+                font-family: "nunito";
+            }
+        }
+
+        @extend %btn-format;
+    }
+}

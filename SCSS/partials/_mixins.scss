@@ -1,0 +1,8 @@
+/* mixin - setea flex y visualizacion de componenetes. */
+@mixin section-layout($flex-direction, $flex-wrap, $align, $justify) {
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    align-items: $align;
+    justify-content: $justify;
+}

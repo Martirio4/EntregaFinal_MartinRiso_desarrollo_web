@@ -31,7 +31,6 @@ section.ourtools .card:hover .btn, section.webuild .webuild-container .card:hove
   background-color: rgba(9, 46, 16, 0.05) !important;
 }
 
-/* Estilos */
 body {
   max-width: 100%;
 }
@@ -82,8 +81,11 @@ main .main-banner .main-container .banner-image-container img {
 }
 
 .separador-webuild {
+  text-align: end;
+  font-family: "Staatliches";
+  color: #2a9d8f;
   background-color: #f1e5d2;
-  height: 50px;
+  height: 40px;
   width: 100%;
 }
 

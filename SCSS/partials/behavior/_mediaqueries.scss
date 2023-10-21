@@ -1,0 +1,54 @@
+/*MEDIAQUERIES - BREAKPOINTS*/
+@media only screen and (min-width: 992px) {
+    main {
+        .nav-divider {
+            display: flex;
+            width: 100%;
+            height: 2px;
+            background-color: $blanco;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .nav-divider {
+        display: none;
+        width: 100%;
+        height: 2px;
+        background-color: $blanco;
+    }
+
+    section.webuild h2 {
+        text-align: center;
+    }
+
+    section.ourtools {
+        background-color: $light;
+        width: 100%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            margin-left: 0px;
+            margin-top: 20px;
+        }
+    }
+
+    .wewill-image-container {
+        display: none;
+    }
+
+    .form-mapa-container {
+        width: 100%;
+        @include section-layout(column, wrap, center, center);
+
+        iframe {
+            margin-top: 3%;
+            width: 90%;
+            height: 40vh;
+        }
+    }
+}
